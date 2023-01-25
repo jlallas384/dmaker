@@ -96,7 +96,6 @@ def func(users):
                 print("BRUH",index)
                 #driver.save_screenshot(f"sc{index}.jpg")
                 driver.delete_all_cookies()
-                driver.execute_script('window.localStorage.clear();')
                 index += 1
                 continue
             #driver.save_screenshot(f"sc{index}.jpg")
@@ -105,6 +104,7 @@ def func(users):
             print(username,password,email,index)
             index += 1
         except:
+            driver.delete_all_cookies()
             pass
 
 
